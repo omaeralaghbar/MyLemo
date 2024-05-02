@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>My Lemo</title>
+    <link href="myLemo.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div id='container'>
+        <div id='titlename'>
+        </div>
+        <div id="addCarForm">
+		<h1>My Library website</h1>
+            <h1>Adding Cars</h1>
+            <div class="login-card">
+                <table class="auto-style2">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">
+                            <select id="type" required class="time">
+                                <option>Mini Cooper</option>
+                                <option>Nissan Sunny</option>
+                                <option>JUKE</option>
+                                <option>Pajero</option>
+                                <option>Toyota Camry</option>
+                                <option>Land Cruiser</option>
+
+                            </select>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">
+                            <input type="text" id="txtModel" placeholder="Car Model" required />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">
+                            <input type="number" id="txtYear" placeholder="Year" required />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">
+                            <input type="number" id="txtKm" placeholder="Kilometers Travelled" required />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="addCar" type="submit" name="addCar" value="Add Car" class="_submit" />
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <center>
+                <div id="btnNextCustomer" class="button"><a href="#">Next</a></div>
+            </center>
+        </div>
+        <div id='addCustomerForm' style="display:none">
+            <h1>Adding Customer</h1>
+            <h3>Fill in the following form to add customer then press next</h3>
+            
+            <div class="login-card">
+                <table class="auto-style2">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">
+                            <input type="text" id="txtCustomerName" placeholder="Customer Name" required />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">
+                            <input type="number" id="txtCustomerID" placeholder="Civil ID Number" required />
+                        </td>
+                        <td></td>
+                    </tr>
+                   
+                    <tr>
+                        <td class="auto-style1">
+                            <input type="number" id="txtAge" placeholder="Age" required />
+                        </td>
+                        <td></td>
+                    </tr>
+					 <tr>
+                        <td class="auto-style1">
+                            <input type="text" id="txtlicence" placeholder="Driving License details" required />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">
+                            <input type="text" id="txtAddress" placeholder="Address" required />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">
+                            <input type="tel" id="txtPhone" placeholder="Telephone" required />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="addCustomer" type="submit" name="addCustomer" value="Add" class="_submit" />
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <center>
+                <div id="btnNextRent" class="button"><a href="#">Next</a></div>
+            </center>
+        </div>
+        <div id='rentForm' style="display:none">
+            <div class="search">
+                <center style="font-size:larger;font-weight:bolder"><h1>Renting Cars</h1></center> <br />
+
+                <span class="labels">Select Customer &nbsp;</span><select class="time" id="customer" required></select> <br /><br />
+                <span class="labels">Select Car &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><select id="carType" class="time" required></select><br /><br />
+                <span class="labels">Car Status &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <select id="carStatus" class="time">
+                    <option>Original</option>
+                    <option>Body Scratches</option>
+                    <option>Damage</option>
+                    <option>Accident</option>
+                </select><br /><br />
+                <span class="labels">Deposite Amount </span>
+                <input type="number" id="deposite" required class="time" /><br />
+                <span class="labels">Renting Days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <input type="number" id="rentDays" required class="time" /><br /><br />
+                <input id="addRent" type="submit" name="addRent" value="Submit" class="_submit" /><br /><br />
+            </div>
+            <div>
+                <div id='return' class='button'> <a href='#'>Return Car</a></div>
+                <div id='rentedSummary' class='button'> <a href='#'>Rented</a></div>
+                <div id='nextSummary' class='button'> <a href='#'>Summary</a></div>
+            </div>
+        </div>
+        <div id='summaryForm' style="display:none">
+            <h1>Summary Report</h1>
+            <div id="rentReport" class="report">
+
+            </div>
+            <div id='backToRent' class='button'> <a href='#'>back</a></div>
+        </div>
+        <div id='rentedForm' style="display:none">
+            <h1>Total Rents</h1>
+             <div id="rentedReport" class="report">
+
+             </div>
+             <div id='backToRent2' class='button'> <a href='#'>back</a></div>
+
+        </div>
+        <div id='returnForm' style="display:none">
+            <div class="search">
+                <center style="font-size:larger;font-weight:bolder"><h1>Returning Car</h1></center> <br />
+                <span class="labels">Select Customer &nbsp;</span><select id="returnCustomer" class="time" required></select> <br /><br />
+                <span class="labels">Car Name/Model&nbsp;</span>
+                <input type="text" id="car" required class="time" readonly /><br />
+                <span class="labels">Old Status &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <input type="text" id="oldStatus" required class="time" readonly /><br />
+                <span class="labels">Current Status &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <select id="returnCarStatus" class="time">
+                    <option value="0">Original</option>
+                    <option value="1000">Body Scratches</option>
+                    <option value="3000">Damage</option>
+                    <option value="5000">Accident</option>
+                </select><br /><br /><br />
+                <input id="printReceipt" type="submit" name="addRent" value="Print Reciept" class="_submit" /><br /><br />
+            
+            </div>
+            <div id='backToRent3' class='button'> <a href='#'>back</a></div>
+        </div>
+        <div id="receiptForm" style="display:none">
+            <h1>Reciept</h1>
+            <div id="reciept" class="report"></div>
+            <div id='backToReturned' class='button'> <a href='#'>back</a></div>
+        </div>
+    </div>
+
+    <!--you must use internet connection before running the code in order to run the code correctly -->
+
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+    <script type="text/javascript" src="myLemo.js"></script>
+</body>
+
+</html>
+
